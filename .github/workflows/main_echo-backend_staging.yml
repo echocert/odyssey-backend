@@ -27,6 +27,7 @@ jobs:
           sed -i "s|@aws_access_secret@|${{ secrets.AWS_SECRET_ACCESS_KEY_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@cognito_app_client_id@|${{ secrets.COGNITO_APP_CLIENT_ID_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@cognito_pool_id@|${{ secrets.COGNITO_POOL_ID_STAGING }}|g" config/env/dev-2.js
+          sed -i "s|@cognito_host@|${{ secrets.COGNITO_HOST_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_frontend_service@|${{ secrets.FRONTEND_SERVICE_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_database@|${{ secrets.AZURE_DATABASE_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_endpoint@|${{ secrets.AZURE_DATABASE_ENDPOINT_STAGING }}|g" config/env/dev-2.js
