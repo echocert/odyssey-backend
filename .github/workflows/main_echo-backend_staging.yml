@@ -29,7 +29,7 @@ jobs:
           sed -i "s|@cognito_pool_id@|${{ secrets.COGNITO_POOL_ID_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_frontend_service@|${{ secrets.FRONTEND_SERVICE_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_database@|${{ secrets.AZURE_DATABASE_STAGING }}|g" config/env/dev-2.js
-          sed -i "s|@config_endpoint@|${{ secrets.AZURE_BLOB_ENDPOINT_STAGING }}|g" config/env/dev-2.js
+          sed -i "s|@config_endpoint@|${{ secrets.AZURE_DATABASE_ENDPOINT_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_key@|${{ secrets.AZURE_BLOB_ACCOUNT_KEY_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_BLOB_ACCOUNT@|${{ secrets.AZURE_BLOB_ACCOUNT_STAGING }}|g" config/env/dev-2.js
           sed -i "s|@config_BLOB_ACCOUNT_KEY@|${{ secrets.AZURE_BLOB_ACCOUNT_KEY_STAGING }}|g" config/env/dev-2.js
