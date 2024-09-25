@@ -1,3 +1,4 @@
+
 var nodeEnv = "dev-2" // process.env.NODE_ENV || "development";
 
 // console.log (nodeEnv);
@@ -10,7 +11,7 @@ const deriveConfig = require('./config.common.derived');
 
 var config = {};
 
-config.PORT = 4000 // process.env.PORT || 4000;
+config.PORT = process.env.PORT || 8080;
 
 config.container = {
     id: 'properties',
@@ -52,4 +53,3 @@ env_specific_config(config);
 deriveConfig(config);
 
 module.exports = config
-
