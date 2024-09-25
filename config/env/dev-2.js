@@ -1,37 +1,38 @@
+
 function env_config( config ) {
 
 
-config.endpoint = '@config.endpoint@'
-config.key = '@config.key@'
-config.BLOB_ACCOUNT='@config.BLOB_ACCOUNT@'
-config.BLOB_ACCOUNT_KEY='@config.BLOB_ACCOUNT_KEY@'
-config.BLOB_CONTAINER_NAME='@config.BLOB_CONTAINER_NAME@'
+config.endpoint = '@config_endpoint@'
+config.key = '@config_key@'
+config.BLOB_ACCOUNT='@config_BLOB_ACCOUNT@'
+config.BLOB_ACCOUNT_KEY='@config_BLOB_ACCOUNT_KEY@'
+config.BLOB_CONTAINER_NAME='@config_BLOB_CONTAINER_NAME@'
 config.database = {
-  id: 'dev-orc-data'
+  id: '@config_database@'
 }
 
 config.aws = {
 	options: {
 		region: "us-east-1",
-		accessKeyId: "",
-		secretAccessKey: "",
+		accessKeyId: "@aws_access_id@",
+		secretAccessKey: "@aws_access_secret@",
 		apiVersion: "latest"
 	},
 }
 config.aws.cognito = {
 
-	cognito_app_client_id: '@cognito_app_client_id@,
+	cognito_app_client_id: '@cognito_app_client_id@',
 	cognito_pool_id: '@cognito_pool_id@',
 	testuser_username: '@testuser_username@',
     testuser_password: '@testuser_password@',
 }
 config.aws.cognito.host = {
-	cognito_host: 'https://odyssey-dev-2.auth.us-east-1.amazoncognito.com',
+	cognito_host: '@cognito_host@',
 	cognito_host_keys: `https://cognito-idp.${config.aws.options.region}.amazonaws.com/${config.aws.cognito.cognito_pool_id}/.well-known/jwks.json`,
 
 }
 
-config.odyssey_host = "https://front-end.eastus.cloudapp.azure.com",
+config.odyssey_host = '@config_frontend_service@',
 
 // TODO: Obviously, this needs to be removed and stored in a secure vault.
 config.permissions = {
