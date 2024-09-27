@@ -75,7 +75,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: Echo-backend
+          app-name: backend-odyssey
           slot-name: 'Production'
           package: .
           clean: true
